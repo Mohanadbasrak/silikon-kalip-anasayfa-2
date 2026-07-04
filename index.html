@@ -41,17 +41,19 @@
   }
 
   .section{
-    max-width:1240px;
+    max-width:1560px;
     margin:0 auto;
-    padding:72px 40px;
+    /* Yan boşluk: üstteki bölümün kenar hizasıyla eşleşir.
+       Daha dar/geniş istersen 100px değerini değiştir (örn. 80px / 120px). */
+    padding:72px clamp(24px, 6vw, 100px);
     display:grid;
-    grid-template-columns:1fr 1.08fr;
-    gap:72px;
+    grid-template-columns:1fr 1.1fr;
+    gap:64px;
     align-items:center;
   }
 
   /* ---------- Sol: içerik ---------- */
-  .content{ max-width:540px; }
+  .content{ max-width:600px; }
 
   .eyebrow{
     display:inline-flex;
