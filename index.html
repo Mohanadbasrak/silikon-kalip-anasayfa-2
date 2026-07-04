@@ -41,11 +41,12 @@
   }
 
   .section{
-    max-width:1560px;
+    max-width:none;          /* sabit sınır yok: iframe genişliğini tam kullanır */
     margin:0 auto;
-    /* Yan boşluk: üstteki bölümün kenar hizasıyla eşleşir.
-       Daha dar/geniş istersen 100px değerini değiştir (örn. 80px / 120px). */
-    padding:72px clamp(24px, 6vw, 100px);
+    /* ► HİZA AYARI: Yan boşluk yüzde ile verilir; üstteki tema bölümüyle
+       aynı hizada başlar. İçerik fazla kenarda kalırsa bu sayıyı BÜYÜT (örn. %10),
+       fazla ortadaysa KÜÇÜLT (örn. %6). */
+    padding:72px 8%;
     display:grid;
     grid-template-columns:1fr 1.1fr;
     gap:64px;
